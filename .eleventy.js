@@ -13,6 +13,7 @@ export default function (eleventyConfig) {
   return {
     templateFormats: ["njk", "md", "html"],
     markdownTemplateEngine: "njk",
+    pathPrefix: "/ghls.github.io/",   // ← this is the fix
     htmlTemplateEngine:     "njk",
 
     dir: {
