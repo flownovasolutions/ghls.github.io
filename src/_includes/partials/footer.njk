@@ -1,129 +1,73 @@
+<footer class="site-footer">
+  <div class="container site-footer__inner">
 
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__top">
-
-      {# ── Brand column ── #}
-      <div>
-<a href="/" class="footer__logo header__logo" aria-label="StageHaus Productions home">
-  <svg class="header__logo-mark-svg" viewBox="0 0 32 32" fill="none"
-     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <!-- Beam cone fill -->
-  <path d="M16 15 L31 31 L1 31 Z" fill="rgba(139,92,246,0.06)"/>
-  <!-- Beam edge lines -->
-  <line x1="16" y1="15" x2="1"  y2="31" stroke="rgba(139,92,246,0.3)" stroke-width="0.75" stroke-linecap="round"/>
-  <line x1="16" y1="15" x2="31" y2="31" stroke="rgba(139,92,246,0.3)" stroke-width="0.75" stroke-linecap="round"/>
-  <!-- Stage floor -->
-  <line x1="0" y1="31" x2="32" y2="31" stroke="rgba(139,92,246,0.5)" stroke-width="1" stroke-linecap="round"/>
-  <!-- Outer diamond housing -->
-  <polygon points="16,1 23,8 16,15 9,8" fill="rgba(139,92,246,0.08)" stroke="#8B5CF6" stroke-width="1.5" stroke-linejoin="round"/>
-  <!-- Inner lens aperture -->
-  <polygon points="16,4.5 19.5,8 16,11.5 12.5,8" fill="#8B5CF6" opacity="0.45"/>
-  <!-- Light source group -->
-  <g class="logo-bulb">
-    <circle cx="16" cy="8" r="5"   fill="rgba(196,181,253,0.18)"/>
-    <circle cx="16" cy="8" r="3"   fill="rgba(216,204,255,0.45)"/>
-    <circle cx="16" cy="8" r="1.8" fill="rgba(237,233,254,0.97)"/>
-    <circle cx="16" cy="8" r="0.9" fill="#FFFFFF"/>
-  </g>
-</svg>
-
-  <span class="header__logo-wordmark">
-    <span class="header__logo-name">StageHaus</span>
-    <span class="header__logo-prod">Productions</span>
-  </span>
-</a>
-
-
-        <p class="footer__tagline">Artist Management · Production · Live Events</p>
-
-        <p class="footer__about">Built for the culture of live music — the festivals, the tours, the artists, and the events that leave people changed.</p>
-
-        <div class="footer__social" aria-label="Social media">
-          <a href="https://instagram.com/stagehausproductions" class="footer__social-link" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="0" fill="currentColor"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
+    <div class="site-footer__brand">
+      <a href="/" class="site-footer__logo" aria-label="{{ site.name }} Home">
+        <img src="/assets/images/logo.svg" alt="{{ site.name }}" width="120" height="34" loading="lazy" />
+      </a>
+      <p class="site-footer__tagline">Your trusted wholesale partner<br />for medical supplies.</p>
+      <div class="site-footer__social">
+        {% if site.social.linkedin %}
+          <a href="{{ site.social.linkedin }}" class="site-footer__social-link" aria-label="{{ site.name }} on LinkedIn" rel="noopener noreferrer" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.059-1.865-3.059-1.866 0-2.152 1.457-2.152 2.963v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.002 3.604 4.604v5.592z"/></svg>
           </a>
-          <a href="https://tiktok.com/@stagehausprod" class="footer__social-link" aria-label="TikTok" rel="noopener noreferrer" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
-            </svg>
-          </a>
-          <a href="https://facebook.com/stagehausproductions" class="footer__social-link" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-          </a>
-        </div>
+        {% endif %}
       </div>
-
-      {# ── Services column ── #}
-      <div>
-        <h3 class="footer__col-heading">Services</h3>
-        <ul class="footer__links" role="list">
-          <li><a href="/artist-management/" class="footer__link">Artist Management</a></li>
-          <li><a href="/booking-strategy/" class="footer__link">Booking Strategy</a></li>
-          <li><a href="/show-logistics/" class="footer__link">Show Logistics</a></li>
-          <li><a href="/merch-operations/" class="footer__link">Merch Operations</a></li>
-          <li><a href="/website-development/" class="footer__link">Website Development</a></li>
-          <li>
-            <span class="footer__link footer__link--soon">
-              Event Production
-              <span class="footer__badge">Soon</span>
-            </span>
-          </li>
-        </ul>
-      </div>
-
-      {# ── Company column ── #}
-      <div>
-        <h3 class="footer__col-heading">Company</h3>
-        <ul class="footer__links" role="list">
-          <li><a href="/" class="footer__link">Home</a></li>
-          <li><a href="/about/" class="footer__link">About</a></li>
-          <li><a href="/contact/" class="footer__link">Contact</a></li>
-          <li><a href="/#services" class="footer__link">All Services</a></li>
-        </ul>
-      </div>
-
-      {# ── Contact column ── #}
-      <div>
-        <h3 class="footer__col-heading">Get in Touch</h3>
-
-        <div class="footer__contact-item">
-          <span class="footer__contact-label">General</span>
-          <a href="mailto:hello@stagehausproductions.com" class="footer__link">hello@stagehausproductions.com</a>
-        </div>
-
-        <div class="footer__contact-item">
-          <span class="footer__contact-label">Booking</span>
-          <a href="mailto:booking@stagehausproductions.com" class="footer__link">booking@stagehausproductions.com</a>
-        </div>
-
-        <div class="footer__contact-item">
-          <span class="footer__contact-label">Based In</span>
-          <span class="footer__link-text">Tulsa, Oklahoma</span>
-        </div>
-
-        <div class="footer__contact-item" style="margin-top: var(--s6);">
-          <a href="/contact/" class="btn btn--electric btn--sm">Start a Project</a>
-        </div>
-      </div>
-
     </div>
 
-    {# ── Bottom bar ── #}
-    <div class="footer__bottom">
-      <p class="footer__copy">© {{ site.year or '2025' }} StageHaus Productions LLC. All rights reserved.</p>
-      <nav class="footer__legal" aria-label="Legal">
-        <a href="/privacy/" class="footer__legal-link">Privacy</a>
-        <a href="/terms/" class="footer__legal-link">Terms</a>
-      </nav>
-    </div>
+    <nav class="site-footer__nav" aria-label="Footer Navigation">
+      <div class="site-footer__nav-col">
+        <h3 class="site-footer__nav-heading">Products</h3>
+        <ul class="site-footer__nav-list" role="list">
+          <li><a href="/products/ppe/"            class="site-footer__nav-link">PPE &amp; Protection</a></li>
+          <li><a href="/products/diagnostics/"    class="site-footer__nav-link">Diagnostics</a></li>
+          <li><a href="/products/surgical/"       class="site-footer__nav-link">Surgical Supplies</a></li>
+          <li><a href="/products/wound-care/"     class="site-footer__nav-link">Wound Care</a></li>
+          <li><a href="/products/rehabilitation/" class="site-footer__nav-link">Rehabilitation</a></li>
+          <li><a href="/catalog/"                 class="site-footer__nav-link">Full Catalog</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__nav-col">
+        <h3 class="site-footer__nav-heading">Company</h3>
+        <ul class="site-footer__nav-list" role="list">
+          <li><a href="/about/"       class="site-footer__nav-link">About Us</a></li>
+          <li><a href="/about/#team"  class="site-footer__nav-link">Our Team</a></li>
+          <li><a href="/careers/"     class="site-footer__nav-link">Careers</a></li>
+          <li><a href="/news/"        class="site-footer__nav-link">News &amp; Updates</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__nav-col">
+        <h3 class="site-footer__nav-heading">Support</h3>
+        <ul class="site-footer__nav-list" role="list">
+          <li><a href="/contact/"       class="site-footer__nav-link">Contact Us</a></li>
+          <li><a href="/faq/"           class="site-footer__nav-link">FAQ</a></li>
+          <li><a href="/shipping/"      class="site-footer__nav-link">Shipping &amp; Returns</a></li>
+          <li><a href="/request-quote/" class="site-footer__nav-link">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__nav-col">
+        <h3 class="site-footer__nav-heading">Contact</h3>
+        <address class="site-footer__address">
+          <p>{{ site.address.street }}<br />{{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}</p>
+          <p><a href="tel:{{ site.phone | replace(' ', '') }}" class="site-footer__nav-link">{{ site.phone }}</a></p>
+          <p><a href="mailto:{{ site.email }}" class="site-footer__nav-link">{{ site.email }}</a></p>
+        </address>
+      </div>
+    </nav>
 
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container site-footer__bottom-inner">
+      <p class="site-footer__copyright">
+        &copy; {{ site.foundedYear }}{% if site.foundedYear != currentYear %}–{{ currentYear }}{% endif %}
+        {{ site.name }}. All rights reserved.
+      </p>
+      <ul class="site-footer__legal" role="list">
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-use/">Terms of Use</a></li>
+        <li><a href="/accessibility/">Accessibility</a></li>
+      </ul>
+    </div>
   </div>
 </footer>

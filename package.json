@@ -1,23 +1,13 @@
 {
-  "name": "ghls.github.io",
+  "name": "ghls-inc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "GHLS Inc. wholesale medical supply website",
+  "type": "module",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/flownovasolutions/ghls.github.io.git"
+    "build": "eleventy",
+    "dev":   "eleventy --serve --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/flownovasolutions/ghls.github.io/issues"
-  },
-  "homepage": "https://github.com/flownovasolutions/ghls.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6"
   }
