@@ -1,0 +1,94 @@
+{
+  "primary": [
+    { "label": "Home",  "url": "/",       "key": "home" },
+    { "label": "About", "url": "/about/", "key": "about" }
+  ],
+  "services": [
+    {
+      "label": "Artist Management",
+      "url": "/artist-management/",
+      "key": "artist-management",
+      "icon": "🎤",
+      "phase": 1,
+      "tagline": "Strategy, booking & career development"
+    },
+    {
+      "label": "Booking Strategy",
+      "url": "/booking-strategy/",
+      "key": "booking-strategy",
+      "icon": "📅",
+      "phase": 1,
+      "tagline": "Routing, negotiation & promoter relations"
+    },
+    {
+      "label": "Show Logistics",
+      "url": "/show-logistics/",
+      "key": "show-logistics",
+      "icon": "🎪",
+      "phase": 1,
+      "tagline": "Load-in to load-out, covered"
+    },
+    {
+      "label": "Merch Operations",
+      "url": "/merch-operations/",
+      "key": "merch-operations",
+      "icon": "👕",
+      "phase": 1,
+      "tagline": "Design, sell & track your merch"
+    },
+    {
+      "label": "Website Development",
+      "url": "/website-development/",
+      "key": "website-development",
+      "icon": "💻",
+      "phase": 1,
+      "tagline": "Artist sites, EPKs & merch stores"
+    },
+    {
+      "label": "Event Production",
+      "url": "/event-production/",
+      "key": "event-production",
+      "icon": "🎬",
+      "phase": 2,
+      "comingSoon": true,
+      "tagline": "Full-scale event design & execution"
+    },
+    {
+      "label": "Artist Hospitality",
+      "url": "/artist-hospitality/",
+      "key": "artist-hospitality",
+      "icon": "🏨",
+      "phase": 2,
+      "comingSoon": true,
+      "tagline": "Travel, riders & on-road care"
+    },
+    {
+      "label": "Vendor Coordination",
+      "url": "/vendor-coordination/",
+      "key": "vendor-coordination",
+      "icon": "🤝",
+      "phase": 2,
+      "comingSoon": true,
+      "tagline": "Sourcing, contracts & relationships"
+    },
+    {
+      "label": "Festival Operations",
+      "url": "/festival-operations/",
+      "key": "festival-operations",
+      "icon": "🎡",
+      "phase": 2,
+      "comingSoon": true,
+      "tagline": "Multi-stage festival management"
+    },
+    {
+      "label": "Creative Direction",
+      "url": "/creative-direction/",
+      "key": "creative-direction",
+      "icon": "🎨",
+      "phase": 2,
+      "comingSoon": true,
+      "tagline": "Visual identity & campaign design"
+    }
+  ],
+  "cta": { "label": "Get in Touch", "url": "/contact/" }
+}

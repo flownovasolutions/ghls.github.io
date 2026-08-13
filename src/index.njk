@@ -1,0 +1,431 @@
+---
+layout: base.njk
+title: StageHaus Productions
+pageDescription: StageHaus Productions is a production company built for the culture of live music — artist management, booking, show logistics, merch, and the events that move people.
+currentPage: home
+bodyClass: page-home
+---
+
+{% from "macros/components.njk" import processStep, testimonialCard %}
+
+{# ── HERO ── #}
+<section class="hero" aria-labelledby="hero-heading">
+
+  {# Background atmosphere #}
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__rule" aria-hidden="true"></div>
+
+  {# Geometric SVG art — spotlight + beams + production grid #}
+  <div class="hero__art" aria-hidden="true">
+    <svg viewBox="0 0 700 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMin slice">
+
+      {# ── Dot grid — production stage floor grid ── #}
+      <g opacity="0.5">
+        {% set cols = [80, 160, 240, 320, 400, 480, 560, 640] %}
+        {% set rows = [100, 180, 260, 340, 420, 500, 580, 660, 740] %}
+        {% for col in cols %}
+          {% for row in rows %}
+            <circle cx="{{ col }}" cy="{{ row }}" r="1.2" fill="rgba(139,92,246,0.12)"/>
+          {% endfor %}
+        {% endfor %}
+      </g>
+
+      {# ── Spotlight source — PAR can at upper right ── #}
+      {# Outer concentric rings = light halo effect #}
+      <circle class="hero-ring"   cx="540" cy="100" r="380" stroke="rgba(139,92,246,0.04)" stroke-width="1" fill="none"/>
+      <circle class="hero-ring"   cx="540" cy="100" r="290" stroke="rgba(139,92,246,0.06)" stroke-width="1" fill="none"/>
+      <circle class="hero-ring-2" cx="540" cy="100" r="210" stroke="rgba(139,92,246,0.08)" stroke-width="1" fill="none"/>
+      <circle class="hero-ring-2" cx="540" cy="100" r="140" stroke="rgba(139,92,246,0.11)" stroke-width="1.5" fill="none"/>
+      <circle class="hero-ring-3" cx="540" cy="100" r="82"  stroke="rgba(139,92,246,0.16)" stroke-width="1.5" fill="none"/>
+      <circle class="hero-ring-3" cx="540" cy="100" r="38"  stroke="rgba(139,92,246,0.22)" stroke-width="1" fill="none"/>
+
+      {# Spotlight fixture — diamond/lens shape #}
+      <polygon points="540,68 562,100 540,132 518,100"
+               stroke="rgba(139,92,246,0.35)" stroke-width="1"
+               fill="rgba(139,92,246,0.06)"/>
+      {# Center dot = the bulb #}
+      <circle cx="540" cy="100" r="5" fill="rgba(139,92,246,0.4)"/>
+      <circle cx="540" cy="100" r="2" fill="rgba(255,255,255,0.6)"/>
+
+      {# ── Light beams — radiating from spotlight source ── #}
+      {# Warm beam left — amber toned #}
+      <line class="hero-beam-1" x1="540" y1="100" x2="-50" y2="900"
+            stroke="rgba(196,148,58,0.08)" stroke-width="1"/>
+      <line class="hero-beam-2" x1="540" y1="100" x2="120" y2="900"
+            stroke="rgba(196,148,58,0.06)" stroke-width="1"/>
+      <line class="hero-beam-3" x1="540" y1="100" x2="280" y2="900"
+            stroke="rgba(196,148,58,0.05)" stroke-width="1"/>
+      {# Cool beams right — violet #}
+      <line class="hero-beam-2" x1="540" y1="100" x2="750" y2="600"
+            stroke="rgba(139,92,246,0.06)" stroke-width="1"/>
+      <line class="hero-beam-1" x1="540" y1="100" x2="700" y2="900"
+            stroke="rgba(139,92,246,0.05)" stroke-width="1"/>
+
+      {# ── Production truss element — horizontal ── #}
+      <g opacity="0.7">
+        {# Main truss rail #}
+        <line x1="300" y1="380" x2="680" y2="380"
+              stroke="rgba(139,92,246,0.12)" stroke-width="1.5"/>
+        {# Truss connection nodes #}
+        <circle cx="340" cy="380" r="3" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+        <circle cx="420" cy="380" r="3" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+        <circle cx="500" cy="380" r="3" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+        <circle cx="580" cy="380" r="3" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+        <circle cx="640" cy="380" r="3" fill="none" stroke="rgba(139,92,246,0.15)" stroke-width="1"/>
+        {# Truss crossbars #}
+        <line x1="340" y1="365" x2="380" y2="395" stroke="rgba(139,92,246,0.08)" stroke-width="1"/>
+        <line x1="380" y1="365" x2="340" y2="395" stroke="rgba(139,92,246,0.08)" stroke-width="1"/>
+        <line x1="420" y1="365" x2="460" y2="395" stroke="rgba(139,92,246,0.08)" stroke-width="1"/>
+        <line x1="460" y1="365" x2="420" y2="395" stroke="rgba(139,92,246,0.08)" stroke-width="1"/>
+        <line x1="500" y1="365" x2="540" y2="395" stroke="rgba(139,92,246,0.08)" stroke-width="1"/>
+        <line x1="540" y1="365" x2="500" y2="395" stroke="rgba(139,92,246,0.08)" stroke-width="1"/>
+        <line x1="580" y1="365" x2="620" y2="395" stroke="rgba(139,92,246,0.06)" stroke-width="1"/>
+        <line x1="620" y1="365" x2="580" y2="395" stroke="rgba(139,92,246,0.06)" stroke-width="1"/>
+        {# Hanging drop lines — lights hanging from truss #}
+        <line x1="360" y1="395" x2="360" y2="440" stroke="rgba(139,92,246,0.15)" stroke-width="1"/>
+        <line x1="440" y1="395" x2="440" y2="470" stroke="rgba(139,92,246,0.15)" stroke-width="1"/>
+        <line x1="520" y1="395" x2="520" y2="450" stroke="rgba(139,92,246,0.15)" stroke-width="1"/>
+        <line x1="600" y1="395" x2="600" y2="460" stroke="rgba(139,92,246,0.1)"  stroke-width="1"/>
+        {# Light fixture heads at bottom of drops #}
+        <polygon points="360,440 368,455 352,455" stroke="rgba(139,92,246,0.25)" stroke-width="1" fill="rgba(139,92,246,0.06)"/>
+        <polygon points="440,470 448,485 432,485" stroke="rgba(139,92,246,0.25)" stroke-width="1" fill="rgba(139,92,246,0.06)"/>
+        <polygon points="520,450 528,465 512,465" stroke="rgba(139,92,246,0.25)" stroke-width="1" fill="rgba(139,92,246,0.06)"/>
+        <polygon points="600,460 608,475 592,475" stroke="rgba(139,92,246,0.18)" stroke-width="1" fill="rgba(139,92,246,0.04)"/>
+      </g>
+
+      {# ── Floating geometric accents ── #}
+      <g class="hero-dot-group">
+        {# Hexagon #}
+        <polygon points="180,520 200,508 220,520 220,544 200,556 180,544"
+                 stroke="rgba(139,92,246,0.18)" stroke-width="1" fill="none"/>
+        {# Small diamond #}
+        <polygon points="420,620 432,640 420,660 408,640"
+                 stroke="rgba(139,92,246,0.15)" stroke-width="1" fill="none"/>
+        {# Cross/plus mark #}
+        <line x1="630" y1="250" x2="630" y2="270" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <line x1="620" y1="260" x2="640" y2="260" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        {# Scattered dots — "sparks" #}
+        <circle cx="160" cy="440" r="2" fill="rgba(139,92,246,0.3)"/>
+        <circle cx="290" cy="560" r="1.5" fill="rgba(139,92,246,0.25)"/>
+        <circle cx="470" cy="680" r="2" fill="rgba(139,92,246,0.2)"/>
+        <circle cx="380" cy="320" r="1.5" fill="rgba(139,92,246,0.22)"/>
+        <circle cx="650" cy="500" r="2" fill="rgba(139,92,246,0.18)"/>
+        <circle cx="560" cy="750" r="1.5" fill="rgba(139,92,246,0.15)"/>
+      </g>
+
+      {# ── Bottom gradient fade so art blends into section below ── #}
+      <defs>
+        <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="70%" stop-color="rgba(8,10,12,0)" />
+          <stop offset="100%" stop-color="rgba(8,10,12,1)" />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="700" height="900" fill="url(#fadeBottom)"/>
+
+    </svg>
+  </div>
+
+  {# Corner bracket decorators — top left + bottom right #}
+  <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
+  <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
+
+  {# Hero content — text always on left #}
+  <div class="hero__content container">
+
+    <div class="hero__eyebrow">
+      <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+      Artist Management · Production · Live Events
+    </div>
+
+    <h1 class="hero__title" id="hero-heading">
+      We Live for the<br>
+      <em>Moment the Lights Drop.</em>
+    </h1>
+
+    <p class="hero__sub">
+      StageHaus Productions is built for the culture of live music — the festivals, the tours, the artists, and the events that leave people changed. From management and booking to full-scale production, we're here for the long run.
+    </p>
+
+    <div class="hero__actions">
+      <a href="/contact/" class="btn btn--primary">Work With StageHaus</a>
+      <a href="#services" class="btn btn--outline">What We Do</a>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <div class="hero__stat-num">10+</div>
+        <div class="hero__stat-label">Years in Production</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">Nationwide</div>
+        <div class="hero__stat-label">Booking & Touring</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">Full-Service</div>
+        <div class="hero__stat-label">Management to Merch</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num electric">Artist-First</div>
+        <div class="hero__stat-label">In Everything We Do</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+{# ── SERVICES STRIP — replaces marquee ── #}
+<div class="services-strip" aria-hidden="true">
+  <div class="services-strip__inner">
+    <span class="services-strip__item">Artist Management</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Booking Strategy</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Show Logistics</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Merch Operations</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Festival Production</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Website Development</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Artist Hospitality</span>
+    <span class="services-strip__sep"></span>
+    <span class="services-strip__item">Creative Direction</span>
+  </div>
+</div>
+
+{# ── SERVICES ── #}
+<section class="section" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-label">What We Do</span>
+      <h2 id="services-heading">Built for Every<br>Stage of the Journey</h2>
+      <p>Five active services. More in development. Every one built around the artist, the event, and the experience — not a checklist.</p>
+    </div>
+
+<div class="svc-grid">
+
+  <a href="/artist-management/" class="svc-card">
+    <div class="svc-card__num">01</div>
+    <div class="svc-card__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="9" y="2" width="6" height="11" rx="3"/>
+        <path d="M5 10a7 7 0 0 0 14 0"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+      </svg>
+    </div>
+    <h3 class="svc-card__title">Artist Management</h3>
+    <p class="svc-card__tagline">Strategy · Booking · Career Development</p>
+    <p class="svc-card__desc">Rate cards, EPKs, tech riders, release planning, and growth strategy — built around where you are and the artist you're becoming.</p>
+    <span class="svc-card__arrow" aria-hidden="true">→</span>
+  </a>
+
+  <a href="/booking-strategy/" class="svc-card">
+    <div class="svc-card__num">02</div>
+    <div class="svc-card__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+        <path d="M8 15l2 2 4-4"/>
+      </svg>
+    </div>
+    <h3 class="svc-card__title">Booking Strategy</h3>
+    <p class="svc-card__tagline">Routing · Negotiation · Promoter Relations</p>
+    <p class="svc-card__desc">Getting you in the right rooms. Nationwide booking with real relationships — knowing who to call, how to pitch, and when to push.</p>
+    <span class="svc-card__arrow" aria-hidden="true">→</span>
+  </a>
+
+  <a href="/show-logistics/" class="svc-card">
+    <div class="svc-card__num">03</div>
+    <div class="svc-card__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+        <polyline points="2 12 12 17 22 12"/>
+        <polyline points="2 17 12 22 22 17"/>
+      </svg>
+    </div>
+    <h3 class="svc-card__title">Show Logistics</h3>
+    <p class="svc-card__tagline">Load-In · Soundcheck · Settlement</p>
+    <p class="svc-card__desc">Advance calls, load-in coordination, hospitality, backstage operations — every detail locked before show day so nothing falls apart when it matters.</p>
+    <span class="svc-card__arrow" aria-hidden="true">→</span>
+  </a>
+
+  <a href="/merch-operations/" class="svc-card">
+    <div class="svc-card__num">04</div>
+    <div class="svc-card__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+        <line x1="7" y1="7" x2="7.01" y2="7"/>
+      </svg>
+    </div>
+    <h3 class="svc-card__title">Merch Operations</h3>
+    <p class="svc-card__tagline">Design · Sales · Revenue Reporting</p>
+    <p class="svc-card__desc">Merch is one of the highest-margin revenue streams an artist has. Square, Shopify, Stripe. Inventory tracked. Numbers clean every time.</p>
+    <span class="svc-card__arrow" aria-hidden="true">→</span>
+  </a>
+
+  <a href="/website-development/" class="svc-card">
+    <div class="svc-card__num">05</div>
+    <div class="svc-card__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+    </div>
+    <h3 class="svc-card__title">Website Development</h3>
+    <p class="svc-card__tagline">Artist Sites · EPKs · Merch Stores</p>
+    <p class="svc-card__desc">Custom artist websites built fast, deployed to GitHub Pages, integrated with merch stores and email capture. Your digital presence should match your live presence.</p>
+    <span class="svc-card__arrow" aria-hidden="true">→</span>
+  </a>
+
+  <div class="svc-card" style="background: var(--electric-dim); border-color: var(--electric-rim); pointer-events: none; cursor: default;">
+    <div class="svc-card__num" style="color: var(--electric-lt);">→</div>
+    <div class="svc-card__icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/>
+      </svg>
+    </div>
+    <h3 class="svc-card__title">More Coming</h3>
+    <p class="svc-card__tagline">Event Production · Hospitality · Festivals</p>
+    <p class="svc-card__desc">Full-scale event production, artist hospitality, vendor coordination, festival operations, and creative direction — all building as StageHaus grows.</p>
+    <a href="/contact/" class="btn btn--electric btn--sm" style="pointer-events: all; margin-top: auto; align-self: flex-start; width: fit-content;">Stay in the Loop</a>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ── THE VISION ── #}
+<section class="section" aria-labelledby="vision-heading">
+  <div class="container">
+    <div class="about-split">
+
+      <div>
+        <span class="section-label">The Vision</span>
+        <h2 id="vision-heading">Building the Company<br>That Gets Called<br>for the Big Stages.</h2>
+        <p>StageHaus is in its first chapter. That means hands-on production work, direct artist relationships, and a reputation earned one show at a time. The goal is bigger — production partnerships with festivals, a team built for scale, a name that lives on laminate passes at the events that matter.</p>
+        <p>Every decision made today is in service of that. The work ethic, the attention to detail, the artist-first philosophy — those don't change when the scale does. That's how you earn the right to operate at that level.</p>
+
+        <ul class="feature-list" style="margin-top: 2rem;">
+          <li class="feature-list__item">
+            <span class="feature-list__check" aria-hidden="true">✓</span>
+            <span>10+ years of production experience across markets nationwide</span>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__check" aria-hidden="true">✓</span>
+            <span>Real artist relationships built through real work</span>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__check" aria-hidden="true">✓</span>
+            <span>Technical depth in production logistics, web development, and merch systems</span>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__check" aria-hidden="true">✓</span>
+            <span>Festival culture in the DNA — Electric Forest, Bonnaroo, Lost Lands</span>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__check" aria-hidden="true">✓</span>
+            <span>Honest about where we are, clear on where we're going</span>
+          </li>
+        </ul>
+
+        <a href="/about/" class="btn btn--outline" style="margin-top: 2rem;">More About StageHaus</a>
+      </div>
+
+      <div class="about-split__cards">
+
+        {# Quote card — full width #}
+        <div class="card" style="grid-column: span 2; border-color: var(--electric-rim); background: var(--electric-dim); display: flex; flex-direction: column; gap: var(--s5);">
+          <span class="section-label">What Drives Us</span>
+          <blockquote style="font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.65; font-weight: var(--fw-reg);">
+            "The festivals we love don't happen by accident. They happen because someone built every system, managed every relationship, and cared enough to get every detail right. That's the work."
+          </blockquote>
+        </div>
+
+        {# Stats pair — full width, two halves #}
+        <div class="stats-pair">
+          <div class="stats-pair__item">
+            <div class="stats-pair__num stats-pair__num--ivory">10+</div>
+            <div class="stats-pair__label">Years in Production</div>
+            <p class="stats-pair__sub">Tulsa, Dallas, and markets beyond</p>
+          </div>
+          <div class="stats-pair__item">
+            <div class="stats-pair__num stats-pair__num--electric">Artist<br>First</div>
+            <div class="stats-pair__label">Every Project</div>
+            <p class="stats-pair__sub">Not a tagline — an operating principle</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{# ── PROCESS ── #}
+<section class="section section--dark" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-label">The Process</span>
+      <h2 id="process-heading">How StageHaus Works</h2>
+      <p>No gatekeeping. No intake bots. A real conversation about your project and an honest answer about how we can help.</p>
+    </div>
+    <div class="grid-auto">
+      {{ processStep("01", "Reach Out", "Tell us about what you're working on — the artist, the event, the vision. We read every message and respond directly.") }}
+      {{ processStep("02", "Discovery Call", "We talk honestly about your goals, your timeline, and whether StageHaus is the right fit. If it's not, we'll say so.") }}
+      {{ processStep("03", "Clear Proposal", "Scope, pricing, and timeline laid out clearly before anything starts. No vague retainers, no surprise invoices.") }}
+      {{ processStep("04", "Execution", "We get to work. You stay informed without being buried. Every deliverable handled with the same intensity — one show or a full campaign.") }}
+    </div>
+  </div>
+</section>
+
+{% if false %}
+<div class="divider"></div>
+
+{# ── TESTIMONIALS ── #}
+<section class="section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-label">From the Artists</span>
+      <h2 id="testimonials-heading">What They Say</h2>
+    </div>
+    <div class="grid-3">
+      {{ testimonialCard(
+        "Having someone who actually knows what they're doing handle the booking, the logistics, and the merch table changed how I experience show days. I just got to play.",
+        "Flint Wick",
+        "Recording Artist",
+        "FW"
+      ) }}
+      {{ testimonialCard(
+        "The level of detail in every advance, every rider, every settlement — it's something I haven't seen from people working at this level. Every show feels like it matters.",
+        "Local Promoter",
+        "Tulsa, OK",
+        "LP"
+      ) }}
+      {{ testimonialCard(
+        "Most people who say they do production show up and hope for the best. StageHaus comes prepared — and that preparation shows in how the whole day runs.",
+        "Venue Manager",
+        "Tulsa, OK",
+        "VM"
+      ) }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+{# ── CTA ── #}
+{% set ctaSectionLabel = "Let's Go" %}
+{% set ctaHeading = "Ready to Build<br>Something Real?" %}
+{% set ctaSubtext = "Whether you need a show covered, an artist managed, a site built, or a festival production partner — reach out and let's figure out what StageHaus can do for you." %}
+{% set ctaPrimaryLabel = "Get in Touch" %}
+{% set ctaSecondaryLabel = "Explore Services" %}
+{% set ctaSecondaryUrl = "#services" %}
+{% include "partials/cta-band.njk" %}

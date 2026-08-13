@@ -1,0 +1,19 @@
+<section class="cta-band" aria-labelledby="cta-heading">
+  <div class="cta-band__inner container">
+    <div class="cta-band__content">
+      <span class="section-label">{{ ctaSectionLabel or "Work With Me" }}</span>
+      <h2 class="cta-band__heading" id="cta-heading">{{ ctaHeading | safe or "Ready to Get to Work?" }}</h2>
+      <p class="cta-band__sub">{{ ctaSubtext or "Reach out and let's talk about your project. No gatekeepers, no intake forms — just a real conversation." }}</p>
+      <div class="cta-band__actions">
+        <a href="{{ ctaPrimaryUrl or '/contact/' }}" class="btn btn--primary">
+          {{ ctaPrimaryLabel or "Get in Touch" }}
+        </a>
+        {% if ctaSecondaryLabel %}
+          <a href="{{ ctaSecondaryUrl or '/about/' }}" class="btn btn--outline">
+            {{ ctaSecondaryLabel }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

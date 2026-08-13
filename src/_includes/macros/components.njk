@@ -1,0 +1,79 @@
+{# ============================================================
+   STAGEHAUS — Reusable Nunjucks Macros
+   Import: {% from "macros/components.njk" import pageHero, processStep, testimonialCard, featureList, valueCard, teamCard, statBar %}
+   ============================================================ #}
+
+{# ── Page Hero ── #}
+{% macro pageHero(label, title, subtitle, breadcrumbLabel) %}
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true"></div>
+  <div class="page-hero__content container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/" class="breadcrumb__link">Home</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span class="breadcrumb__current" aria-current="page">{{ breadcrumbLabel or title }}</span>
+    </nav>
+    <span class="section-label">{{ label }}</span>
+    <h1 class="page-hero__title">{{ title | safe }}</h1>
+    <p class="page-hero__sub">{{ subtitle }}</p>
+  </div>
+</section>
+{% endmacro %}
+
+{# ── Process Step ── #}
+{% macro processStep(num, title, description) %}
+<div class="process-step">
+  <div class="process-step__num" aria-hidden="true">{{ num }}</div>
+  <div class="process-step__body">
+    <h4 class="process-step__title">{{ title }}</h4>
+    <p class="process-step__desc">{{ description }}</p>
+  </div>
+</div>
+{% endmacro %}
+
+{# ── Testimonial ── #}
+{% macro testimonialCard(quote, name, role, initials) %}
+<blockquote class="testimonial">
+  <p class="testimonial__quote">{{ quote }}</p>
+  <footer class="testimonial__footer">
+    <div class="testimonial__avatar" aria-hidden="true">{{ initials }}</div>
+    <div>
+      <cite class="testimonial__name">{{ name }}</cite>
+      <span class="testimonial__role">{{ role }}</span>
+    </div>
+  </footer>
+</blockquote>
+{% endmacro %}
+
+{# ── Feature List ── #}
+{% macro featureList(items) %}
+<ul class="feature-list" role="list">
+  {% for item in items %}
+    <li class="feature-list__item">
+      <span class="feature-list__check" aria-hidden="true">✓</span>
+      <span>{{ item }}</span>
+    </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{# ── Value Card ── #}
+{% macro valueCard(icon, title, description) %}
+<div class="value-card">
+  <div class="value-card__icon" aria-hidden="true">{{ icon }}</div>
+  <h3 class="value-card__title">{{ title }}</h3>
+  <p class="value-card__desc">{{ description }}</p>
+</div>
+{% endmacro %}
+
+{# ── Stat Bar ── #}
+{% macro statBar(pillars) %}
+<div class="stat-bar">
+  {% for p in pillars %}
+    <div class="stat-bar__item">
+      <span class="stat-bar__num">{{ p.number }}</span>
+      <span class="stat-bar__label">{{ p.label }}</span>
+    </div>
+  {% endfor %}
+</div>
+{% endmacro %}

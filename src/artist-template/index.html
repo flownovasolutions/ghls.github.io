@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[ARTIST NAME] — Official Website. Music, shows, merch and more." />
+  <title>[ARTIST NAME] — Official Site</title>
+
+  <!-- Google Fonts: Cormorant Garamond + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!--
+    ══════════════════════════════════════════════════════════════════
+    STAGEHAUS ARTIST TEMPLATE — "MIDNIGHT" VARIANT
+    ══════════════════════════════════════════════════════════════════
+    Customization Instructions:
+    ─────────────────────────────
+    1. Replace all [ARTIST NAME] instances with the artist name
+    2. Replace [ARTIST GENRE] with genre (e.g. "Indie Rock · Tulsa, OK")
+    3. Replace [ARTIST BIO] with the artist biography
+    4. Update all href="#" links with real URLs
+    5. Update social links in the footer
+    6. Add real show dates in the #shows section
+    7. Add real merch products in the #merch section
+    8. Replace placeholder images with real artist photography
+
+    Deployment:
+    ─────────────────────────────
+    - Works as a static HTML/CSS site (no build step required)
+    - Deploy to GitHub Pages: push to a /docs folder or root of a gh-pages branch
+    - Or deploy to Netlify by dragging the artist-template folder into netlify.com/drop
+    - Custom domain: update CNAME file in repo root
+
+    Integrations (see comments in relevant sections):
+    ─────────────────────────────
+    - Email capture: Mailchimp / ConvertKit embed or API
+    - Show listings: Songkick, Bandsintown, or manual
+    - Merch: Square Web Payments SDK or Stripe.js
+    - Music embeds: Spotify, Apple Music, Bandcamp iFrame
+    ══════════════════════════════════════════════════════════════════
+  -->
+</head>
+<body>
+
+  <!-- ── HEADER ───────────────────────────────────────────────── -->
+  <header class="at-header" id="site-header">
+    <nav class="at-nav container" aria-label="Main navigation">
+      <a href="#" class="at-nav__logo" aria-label="[ARTIST NAME] — Home">
+        <!-- Replace text with <img src="logo.svg" alt="[ARTIST NAME]" /> if a logo image is available -->
+        <span class="at-nav__logo-text">[ARTIST NAME]</span>
+      </a>
+      <ul class="at-nav__links" role="list">
+        <li><a href="#music" class="at-nav__link">Music</a></li>
+        <li><a href="#shows" class="at-nav__link">Shows</a></li>
+        <li><a href="#about" class="at-nav__link">About</a></li>
+        <li><a href="#merch" class="at-nav__link">Merch</a></li>
+        <li><a href="#contact" class="at-nav__link at-nav__link--cta">Book / Contact</a></li>
+      </ul>
+      <button class="at-nav__hamburger" id="at-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="at-mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="at-mobile-menu" id="at-mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+      <button class="at-mobile-menu__close" id="at-menu-close" aria-label="Close navigation menu">✕</button>
+      <ul class="at-mobile-menu__links" role="list">
+        <li><a href="#music">Music</a></li>
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#merch">Merch</a></li>
+        <li><a href="#contact">Book / Contact</a></li>
+      </ul>
+    </div>
+    <div class="at-overlay" id="at-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="at-hero" id="hero" aria-label="Hero">
+      <!--
+        BACKGROUND IMAGE: Replace the gradient background in style.css
+        .at-hero { background-image: url('images/hero-bg.jpg'); }
+        Recommended: 1920×1080px or larger, compressed WebP
+      -->
+      <div class="at-hero__content container">
+        <p class="at-hero__genre">[ARTIST GENRE]</p>
+        <h1 class="at-hero__title">[ARTIST NAME]</h1>
+        <p class="at-hero__tagline">
+          <!-- Replace with a short, evocative tagline — one or two lines max -->
+          Music from the in-between places.<br />Built to be heard live.
+        </p>
+        <div class="at-hero__actions">
+          <a href="#music" class="at-btn at-btn--primary">Listen Now</a>
+          <a href="#shows" class="at-btn at-btn--outline">Upcoming Shows</a>
+        </div>
+      </div>
+      <div class="at-hero__scroll" aria-hidden="true">
+        <span>↓</span>
+      </div>
+    </section>
+
+    <!-- ── MUSIC ─────────────────────────────────────────────────── -->
+    <section class="at-section" id="music" aria-labelledby="music-heading">
+      <div class="container">
+        <div class="at-section-header">
+          <span class="at-label">Latest Release</span>
+          <h2 id="music-heading">New Music</h2>
+        </div>
+
+        <div class="at-music-grid">
+          <!-- RELEASE CARD 1 — Latest -->
+          <div class="at-release at-release--featured">
+            <div class="at-release__art" aria-label="Album art placeholder">
+              <div class="at-release__art-inner">
+                <span class="at-release__art-icon" aria-hidden="true">♪</span>
+              </div>
+              <!--
+                Replace placeholder with:
+                <img src="images/album-art.jpg" alt="[ALBUM NAME] — [ARTIST NAME]" />
+              -->
+            </div>
+            <div class="at-release__body">
+              <p class="at-label">Album · 2026</p>
+              <h3 class="at-release__title">[ALBUM TITLE]</h3>
+              <p class="at-release__desc">
+                [Brief album description — 1–2 sentences. What's the story? What should fans feel when they listen?]
+              </p>
+              <div class="at-release__streams">
+                <!-- Streaming Links — replace # with real URLs -->
+                <a href="#" class="at-stream-link" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify">
+                  <span aria-hidden="true">◉</span> Spotify
+                </a>
+                <a href="#" class="at-stream-link" target="_blank" rel="noopener noreferrer" aria-label="Listen on Apple Music">
+                  <span aria-hidden="true">◈</span> Apple Music
+                </a>
+                <a href="#" class="at-stream-link" target="_blank" rel="noopener noreferrer" aria-label="Listen on Bandcamp">
+                  <span aria-hidden="true">◎</span> Bandcamp
+                </a>
+              </div>
+
+              <!--
+                SPOTIFY EMBED (optional):
+                <iframe
+                  src="https://open.spotify.com/embed/album/[ALBUM_ID]?utm_source=generator"
+                  width="100%"
+                  height="152"
+                  frameBorder="0"
+                  allowfullscreen
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="[ALBUM TITLE] on Spotify"
+                  style="border-radius:12px;margin-top:1rem;"
+                ></iframe>
+              -->
+            </div>
+          </div>
+
+          <!-- RELEASE CARD 2 -->
+          <div class="at-release">
+            <div class="at-release__art at-release__art--sm" aria-label="Single art placeholder">
+              <div class="at-release__art-inner">
+                <span class="at-release__art-icon" aria-hidden="true">♫</span>
+              </div>
+            </div>
+            <div class="at-release__body">
+              <p class="at-label">Single · 2025</p>
+              <h3 class="at-release__title">[SINGLE TITLE]</h3>
+              <div class="at-release__streams">
+                <a href="#" class="at-stream-link" target="_blank" rel="noopener noreferrer">◉ Stream</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RELEASE CARD 3 -->
+          <div class="at-release">
+            <div class="at-release__art at-release__art--sm" aria-label="EP art placeholder">
+              <div class="at-release__art-inner">
+                <span class="at-release__art-icon" aria-hidden="true">♬</span>
+              </div>
+            </div>
+            <div class="at-release__body">
+              <p class="at-label">EP · 2024</p>
+              <h3 class="at-release__title">[EP TITLE]</h3>
+              <div class="at-release__streams">
+                <a href="#" class="at-stream-link" target="_blank" rel="noopener noreferrer">◉ Stream</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SHOWS ─────────────────────────────────────────────────── -->
+    <section class="at-section at-section--dark" id="shows" aria-labelledby="shows-heading">
+      <div class="container">
+        <div class="at-section-header">
+          <span class="at-label">On the Road</span>
+          <h2 id="shows-heading">Upcoming Shows</h2>
+        </div>
+
+        <div class="at-shows">
+          <!--
+            SHOW LISTINGS — Repeat .at-show for each date
+            Or integrate Bandsintown widget:
+            <div id="bit-events-widget" data-artist-name="[ARTIST NAME]" data-display-limit="10"></div>
+            <script src="https://widget.bandsintown.com/main.min.js" charset="utf-8"></script>
+          -->
+          <div class="at-show">
+            <div class="at-show__date">
+              <span class="at-show__month">AUG</span>
+              <span class="at-show__day">14</span>
+            </div>
+            <div class="at-show__info">
+              <h3 class="at-show__venue">[VENUE NAME]</h3>
+              <p class="at-show__location">[City, State]</p>
+            </div>
+            <div class="at-show__meta">
+              <span class="at-show__time">8:00 PM · Doors 7</span>
+            </div>
+            <a href="#" class="at-btn at-btn--sm at-btn--outline" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </div>
+
+          <div class="at-show">
+            <div class="at-show__date">
+              <span class="at-show__month">AUG</span>
+              <span class="at-show__day">22</span>
+            </div>
+            <div class="at-show__info">
+              <h3 class="at-show__venue">[VENUE NAME]</h3>
+              <p class="at-show__location">[City, State]</p>
+            </div>
+            <div class="at-show__meta">
+              <span class="at-show__time">9:00 PM · All Ages</span>
+            </div>
+            <a href="#" class="at-btn at-btn--sm at-btn--outline" target="_blank" rel="noopener noreferrer">Tickets</a>
+          </div>
+
+          <div class="at-show">
+            <div class="at-show__date">
+              <span class="at-show__month">SEP</span>
+              <span class="at-show__day">6</span>
+            </div>
+            <div class="at-show__info">
+              <h3 class="at-show__venue">[FESTIVAL NAME]</h3>
+              <p class="at-show__location">[City, State]</p>
+            </div>
+            <div class="at-show__meta">
+              <span class="at-show__time">Festival · [Stage Name]</span>
+            </div>
+            <a href="#" class="at-btn at-btn--sm at-btn--outline" target="_blank" rel="noopener noreferrer">Info</a>
+          </div>
+
+          <div class="at-shows__empty" hidden>
+            <p>No upcoming shows scheduled — <a href="#contact">get in touch</a> to book a show.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+    <section class="at-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="at-about">
+          <div class="at-about__image" aria-label="Artist photo placeholder">
+            <!--
+              Replace with:
+              <img src="images/artist-photo.jpg" alt="[ARTIST NAME]" />
+            -->
+            <div class="at-about__image-placeholder">
+              <span aria-hidden="true">◈</span>
+            </div>
+          </div>
+          <div class="at-about__content">
+            <span class="at-label">The Artist</span>
+            <h2 id="about-heading">[ARTIST NAME]</h2>
+            <p class="at-about__bio">
+              [ARTIST BIO — 2–3 paragraphs. Who are you? Where are you from? What drives your music? What's the story? Write in third person for press use.]
+            </p>
+            <p class="at-about__bio" style="margin-top:1em;">
+              [Second paragraph — touring experience, collaborations, or key moments in the artist's career.]
+            </p>
+            <div class="at-about__links" style="margin-top:1.5rem;">
+              <a href="#" class="at-btn at-btn--primary" download>Download EPK</a>
+              <a href="#contact" class="at-btn at-btn--outline">Press Inquiry</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MERCH ─────────────────────────────────────────────────── -->
+    <section class="at-section at-section--dark" id="merch" aria-labelledby="merch-heading">
+      <div class="container">
+        <div class="at-section-header">
+          <span class="at-label">Official Store</span>
+          <h2 id="merch-heading">Merch</h2>
+        </div>
+
+        <!--
+          SQUARE WEB PAYMENTS SDK INTEGRATION:
+          <script src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+          In your script: const payments = Square.payments(appId, locationId);
+
+          STRIPE INTEGRATION:
+          <script src="https://js.stripe.com/v3/"></script>
+          const stripe = Stripe('your_publishable_key');
+        -->
+
+        <div class="at-merch-grid">
+          <!-- Repeat .at-merch-card for each product -->
+          <div class="at-merch-card">
+            <div class="at-merch-card__img" aria-label="Product image placeholder">
+              <span class="at-merch-card__icon" aria-hidden="true">◈</span>
+              <!--
+                Replace with:
+                <img src="images/merch-tee.jpg" alt="[PRODUCT NAME]" />
+              -->
+            </div>
+            <div class="at-merch-card__body">
+              <h3 class="at-merch-card__title">[PRODUCT NAME]</h3>
+              <p class="at-merch-card__meta">Unisex · Sizes XS–2XL</p>
+              <div class="at-merch-card__footer">
+                <span class="at-merch-card__price">$35.00</span>
+                <button class="at-btn at-btn--primary at-btn--sm" data-product="product-1">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="at-merch-card">
+            <div class="at-merch-card__img" aria-label="Product image placeholder">
+              <span class="at-merch-card__icon" aria-hidden="true">◉</span>
+            </div>
+            <div class="at-merch-card__body">
+              <h3 class="at-merch-card__title">[PRODUCT NAME]</h3>
+              <p class="at-merch-card__meta">Limited edition · 100 units</p>
+              <div class="at-merch-card__footer">
+                <span class="at-merch-card__price">$28.00</span>
+                <button class="at-btn at-btn--primary at-btn--sm" data-product="product-2">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="at-merch-card">
+            <div class="at-merch-card__img" aria-label="Product image placeholder">
+              <span class="at-merch-card__icon" aria-hidden="true">◎</span>
+            </div>
+            <div class="at-merch-card__body">
+              <h3 class="at-merch-card__title">[PRODUCT NAME]</h3>
+              <p class="at-merch-card__meta">One size · Heavyweight fleece</p>
+              <div class="at-merch-card__footer">
+                <span class="at-merch-card__price">$65.00</span>
+                <button class="at-btn at-btn--primary at-btn--sm" data-product="product-3">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EMAIL CAPTURE ──────────────────────────────────────────── -->
+    <section class="at-section at-section--accent" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="at-newsletter">
+          <h2 id="newsletter-heading">Stay in the Loop</h2>
+          <p>New music, show dates, and exclusive content — directly to your inbox.</p>
+          <!--
+            MAILCHIMP EMBED:
+            Replace the form below with your Mailchimp embedded form code
+            Or use ConvertKit / Flodesk for a cleaner integration
+
+            CONVERTKIT EXAMPLE:
+            <script async data-uid="[YOUR_FORM_ID]" src="https://[YOUR_ACCOUNT].ck.page/[YOUR_FORM_ID]/index.js"></script>
+          -->
+          <form class="at-newsletter__form" id="newsletter-form" method="POST" action="#" novalidate>
+            <div class="at-newsletter__fields">
+              <input
+                type="email"
+                name="EMAIL"
+                id="newsletter-email"
+                placeholder="your@email.com"
+                required
+                aria-label="Email address"
+                class="at-newsletter__input"
+              />
+              <button type="submit" class="at-btn at-btn--primary">Subscribe</button>
+            </div>
+            <p class="at-newsletter__note">No spam. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT / BOOKING ──────────────────────────────────────── -->
+    <section class="at-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="at-section-header">
+          <span class="at-label">Get In Touch</span>
+          <h2 id="contact-heading">Book a Show /<br />Press Inquiry</h2>
+        </div>
+
+        <div class="at-contact-grid">
+          <div class="at-contact-info">
+            <div class="at-contact-item">
+              <strong>Booking &amp; Management</strong><br />
+              <a href="mailto:artists@stagehaus.com">artists@stagehaus.com</a><br />
+              <small>Managed by StageHaus Productions</small>
+            </div>
+            <div class="at-contact-item" style="margin-top:1.5rem;">
+              <strong>Press &amp; Media</strong><br />
+              <a href="mailto:hello@stagehaus.com">hello@stagehaus.com</a>
+            </div>
+            <div class="at-contact-item" style="margin-top:1.5rem;">
+              <strong>Follow [ARTIST NAME]</strong>
+              <div class="at-social" style="margin-top:.5rem;">
+                <a href="#" class="at-social__link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="#" class="at-social__link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+                <a href="#" class="at-social__link" target="_blank" rel="noopener noreferrer" aria-label="Spotify">Spotify</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="at-contact-form" id="booking-form" method="POST" action="#" novalidate aria-label="Booking inquiry form">
+            <div class="at-form-group">
+              <label class="at-form-label" for="b-name">Name <span aria-hidden="true">*</span></label>
+              <input class="at-form-input" type="text" id="b-name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="at-form-group">
+              <label class="at-form-label" for="b-email">Email <span aria-hidden="true">*</span></label>
+              <input class="at-form-input" type="email" id="b-email" name="email" required placeholder="your@email.com" />
+            </div>
+            <div class="at-form-group">
+              <label class="at-form-label" for="b-type">Inquiry Type <span aria-hidden="true">*</span></label>
+              <select class="at-form-select" id="b-type" name="type" required>
+                <option value="" disabled selected>Select…</option>
+                <option value="booking">Show Booking</option>
+                <option value="press">Press / Media</option>
+                <option value="sync">Sync / Licensing</option>
+                <option value="collab">Collaboration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="at-form-group">
+              <label class="at-form-label" for="b-message">Message <span aria-hidden="true">*</span></label>
+              <textarea class="at-form-textarea" id="b-message" name="message" rows="4" required placeholder="Tell us about your inquiry…"></textarea>
+            </div>
+            <button type="submit" class="at-btn at-btn--primary" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ───────────────────────────────────────────────── -->
+  <footer class="at-footer">
+    <div class="container">
+      <div class="at-footer__inner">
+        <div class="at-footer__brand">
+          <span class="at-nav__logo-text">[ARTIST NAME]</span>
+          <p class="at-footer__managed">Managed by <a href="https://stagehaus.com" target="_blank" rel="noopener noreferrer">StageHaus Productions</a></p>
+        </div>
+        <div class="at-footer__links">
+          <a href="#music">Music</a>
+          <a href="#shows">Shows</a>
+          <a href="#merch">Merch</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="at-footer__social">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer">TT</a>
+          <a href="#" aria-label="Spotify" target="_blank" rel="noopener noreferrer">SP</a>
+          <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">YT</a>
+        </div>
+      </div>
+      <p class="at-footer__copy">
+        &copy; <span id="at-year"></span> [ARTIST NAME]. All rights reserved.
+        &nbsp;·&nbsp; Site by <a href="https://stagehaus.com">StageHaus Productions</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Year ────────────────────────────────────────────────────
+    document.getElementById('at-year').textContent = new Date().getFullYear();
+
+    // ── Header scroll state ─────────────────────────────────────
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 32);
+    }, { passive: true });
+
+    // ── Mobile menu ─────────────────────────────────────────────
+    const hamburger = document.getElementById('at-hamburger');
+    const mobileMenu = document.getElementById('at-mobile-menu');
+    const overlay = document.getElementById('at-overlay');
+    const closeBtn = document.getElementById('at-menu-close');
+
+    function openMenu() {
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      overlay.setAttribute('aria-hidden', 'false');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      mobileMenu.classList.add('is-open');
+      overlay.classList.add('is-open');
+    }
+
+    function closeMenu() {
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      overlay.setAttribute('aria-hidden', 'true');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      mobileMenu.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+    }
+
+    hamburger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // ── Smooth scroll ────────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ── Form simulation ──────────────────────────────────────────
+    ['contact-form', 'newsletter-form', 'booking-form'].forEach(id => {
+      const form = document.getElementById(id);
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('[type="submit"]');
+        const orig = btn.textContent;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = '✓ Sent!';
+          btn.style.background = '#2a7a4a';
+          setTimeout(() => {
+            btn.textContent = orig;
+            btn.style.background = '';
+            btn.disabled = false;
+            this.reset();
+          }, 3000);
+        }, 1200);
+      });
+    });
+  </script>
+
+</body>
+</html>
