@@ -35,7 +35,7 @@
           <div class="site-nav__dropdown" role="menu" aria-label="Products menu">
 
             {# All Products #}
-            <a href="/products/"
+            <a href="{{ '/products/' | url }}"
                class="site-nav__dropdown-link{% if activePage == 'products' %} is-active{% endif %}"
                role="menuitem">
               <span class="site-nav__dropdown-label">All Products</span>
@@ -43,7 +43,7 @@
             </a>
 
             {# Women's Health #}
-            <a href="/products/womens-health/"
+            <a href="{{ '/products/womens-health/' | url }}"
                class="site-nav__dropdown-link{% if activePage == 'womens-health' %} is-active{% endif %}"
                role="menuitem">
               <span class="site-nav__dropdown-label">Women's Health</span>
@@ -52,7 +52,7 @@
 
             {# Medical Diagnostics — has sub-menu #}
             <div class="site-nav__dropdown-item site-nav__dropdown-item--sub">
-              <a href="/products/diagnostics/"
+              <a href="{{ '/products/diagnostics/' | url }}"
                  class="site-nav__dropdown-link{% if activePage == 'diagnostics' %} is-active{% endif %}"
                  role="menuitem"
                  aria-haspopup="true">
@@ -94,7 +94,7 @@
         </li>
 
         <li class="site-nav__item">
-          <a href="/about/"
+          <a href="{{ '/about/' | url}}"
              class="site-nav__link{% if activePage == 'about' %} is-active{% endif %}"
              {% if activePage == 'about' %}aria-current="page"{% endif %}>
             About
@@ -114,7 +114,7 @@
 
     {# ── Header Actions ── #}
     <div class="site-header__actions">
-      <a href="/request-quote/" class="btn btn--primary btn--sm">Request a Quote</a>
+      <a href="{{ '/request-quote/' | url}}" class="btn btn--primary btn--sm">Request a Quote</a>
     </div>
 
     {# ── Mobile Toggle ── #}

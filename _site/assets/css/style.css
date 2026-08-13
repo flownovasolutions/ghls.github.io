@@ -1074,6 +1074,7 @@ code, kbd, samp, .mono {
   background-color: var(--clr-primary-900);
   padding-top: calc(var(--header-height) + var(--space-16));
   padding-bottom: var(--space-16);
+  margin-top: var(--header-height);
   position: relative;
   overflow: hidden;
 }
@@ -4922,4 +4923,64 @@ code, kbd, samp, .mono {
 
 
 /* ── HOW IT WORKS: MORE SPACE BETWEEN STEPS ─────────── */
+
+
+
+
+
+/* ── PAGE HERO ─────────────────────────────────────────── */
+.page-hero {
+  background: var(--clr-primary-900);
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.page-hero__inner {
+  display: flex;
+  align-items: center;
+}
+
+.page-hero__content {
+  max-width: 620px;
+  padding-left: var(--space-6);
+  border-left: 3px solid var(--clr-teal-500);
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--weight-semibold);
+  color: var(--clr-white);
+  line-height: var(--leading-snug);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.page-hero__sub {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: var(--leading-relaxed);
+  max-width: 52ch;
+  margin: 0 0 var(--space-6) 0;
+}
+
+.page-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.page-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--clr-teal-300);
+  background: rgba(15, 140, 144, 0.1);
+  border: 1px solid rgba(94, 196, 199, 0.25);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-4);
+}
+
 
