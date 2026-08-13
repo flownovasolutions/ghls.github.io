@@ -1644,7 +1644,6 @@ code, kbd, samp, .mono {
   line-height: 1;
   color: var(--clr-primary-100);
   pointer-events: none;
-  select: none;
 }
 
 .testimonial-card__body {
