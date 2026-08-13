@@ -1,22 +1,22 @@
 {
-  "name": "StageHaus Productions",
-  "shortName": "StageHaus",
-  "tagline": "Hands-On Execution.",
-  "description": "StageHaus Productions is a boutique, single-operator production studio offering artist management, booking strategy, show logistics, merch operations, and website development — based in Tulsa, Oklahoma.",
-  "url": "https://yourusername.github.io/stagehaus",
-  "email": "hello@stagehausproductions.com",
-  "emailBooking": "booking@stagehausproductions.com",
-  "emailManagement": "management@stagehausproductions.com",
-  "location": "Tulsa, Oklahoma",
+  "name": "GHLS Inc.",
+  "shortName": "GHLS",
+  "tagline": "Smarter Pricing for Clinics.",
+  "description": "GHLS Inc. supplies clinics with FDA-compliant women's health and diagnostic products — sourced strategically so you can stop overpaying on essentials.",
+  "url": "https://ghls.github.io",
+  "email": "info@ghlsinc.com",
+  "emailQuotes": "quotes@ghlsinc.com",
+  "emailCompliance": "compliance@ghlsinc.com",
+  "location": "Nationwide Distribution",
   "social": {
     "instagram": "#",
     "twitter": "#",
     "linkedin": "#"
   },
   "pillars": [
-    { "number": "10+", "label": "Years in Production" },
-    { "number": "1",   "label": "Dedicated Point of Contact" },
-    { "number": "Tulsa · Dallas", "label": "Markets Served" },
-    { "number": "100%", "label": "Hands-On Every Show" }
+    { "number": "20+",  "label": "Years in Medical Distribution" },
+    { "number": "500+", "label": "Clinic Partners Nationwide" },
+    { "number": "30%",  "label": "Avg. Savings vs. Retail" },
+    { "number": "100%", "label": "FDA-Compliant Inventory" }
   ]
 }
