@@ -4923,6 +4923,4 @@ code, kbd, samp, .mono {
 
 
 /* ── HOW IT WORKS: MORE SPACE BETWEEN STEPS ─────────── */
-.steps {
-  column-gap: var(--space-24);
-}
+
