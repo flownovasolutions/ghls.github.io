@@ -824,6 +824,7 @@ code, kbd, samp, .mono {
   display: flex;
   align-items: center;
   background-color: var(--clr-primary-950);
+  margin-top: var(--header-height);
   overflow: hidden;
 }
 
