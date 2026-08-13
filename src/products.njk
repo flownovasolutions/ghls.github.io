@@ -6,15 +6,15 @@ pageDescription: "GHLS Inc. specializes in Women's Health and Medical Diagnostic
 activePage: products
 ---
 
-{# PAGE HERO #}
-<section class="page-hero" aria-label="Products page hero">
+{# ── PAGE HERO ───────────────────────────────────────────── #}
+<section class="page-hero" aria-label="Products overview">
   <div class="container page-hero__inner">
     <div class="page-hero__content">
       <h1 class="page-hero__title">Two categories.<br />One trusted source.</h1>
       <p class="page-hero__sub">
         GHLS focuses exclusively on Women's Health and Medical Diagnostics — the categories where clinics spend the most and where our sourcing model delivers the biggest savings.
       </p>
-      <div class="page-hero__badges" aria-label="Our specialties">
+      <div class="page-hero__badges">
         <span class="page-hero__badge">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M12 14v8"/><path d="M9 19h6"/></svg>
           Women's Health
@@ -28,23 +28,21 @@ activePage: products
   </div>
 </section>
 
-
-{# OVERVIEW CARDS #}
-<section class="section section--light" aria-labelledby="products-overview-heading">
+{# ── SPECIALTY CARDS ─────────────────────────────────────── #}
+<section class="section section--light" aria-labelledby="specialties-heading">
   <div class="container">
+
     <div class="section-header">
       <p class="section-header__eyebrow">Our Specialties</p>
-      <h2 class="section-header__title" id="products-overview-heading">
-        Focused inventory. Real savings.
-      </h2>
+      <h2 class="section-header__title" id="specialties-heading">Focused inventory. Real savings.</h2>
       <p class="section-header__sub">
         By narrowing our focus to two high-volume clinical categories, we maintain deeper inventory, stronger supplier relationships, and better pricing than any general-line distributor.
       </p>
     </div>
 
-    <div class="specialty-cards" style="margin-top: var(--space-12);">
+    <div class="specialty-cards">
 
-      <a href="/products/womens-health/" class="specialty-card" aria-label="Women's Health products">
+      <a href="{{ '/products/womens-health/' | url }}" class="specialty-card" aria-label="Explore Women's Health products">
         <div class="specialty-card__icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M12 14v8"/><path d="M9 19h6"/></svg>
         </div>
@@ -53,7 +51,7 @@ activePage: products
           <p class="specialty-card__desc">
             OB/GYN and reproductive health supplies sourced at scale. From pregnancy diagnostics to exam consumables — high volume, competitive pricing, full compliance.
           </p>
-          <ul class="specialty-card__tags" aria-label="Includes">
+          <ul class="specialty-card__tags" aria-label="Products include">
             <li>Pregnancy Tests</li>
             <li>Ovulation Kits</li>
             <li>OB/GYN Consumables</li>
@@ -67,16 +65,16 @@ activePage: products
         </span>
       </a>
 
-      <a href="/products/diagnostics/" class="specialty-card" aria-label="Medical Diagnostics products">
+      <a href="{{ '/products/diagnostics/' | url }}" class="specialty-card" aria-label="Explore Medical Diagnostics products">
         <div class="specialty-card__icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m10 0h3a2 2 0 0 0 2-2v-3"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <div class="specialty-card__body">
           <h3 class="specialty-card__title">Medical Diagnostics</h3>
           <p class="specialty-card__desc">
             Rapid test kits across four key categories — drug, COVID, flu, and strep. Stocked for high-volume clinical use with pricing that protects your operating margins.
           </p>
-          <ul class="specialty-card__tags" aria-label="Includes">
+          <ul class="specialty-card__tags" aria-label="Products include">
             <li>Drug Testing</li>
             <li>COVID Testing</li>
             <li>Flu Testing</li>
@@ -93,67 +91,109 @@ activePage: products
   </div>
 </section>
 
-{# HOW WE SOURCE #}
-<section class="section why-section" aria-labelledby="sourcing-heading">
+{# ── PROOF STRIP ─────────────────────────────────────────── #}
+<section class="proof-strip" aria-label="By the numbers">
+  <div class="container proof-strip__grid">
+    <div class="proof-strip__item">
+      <span class="proof-strip__num">15–30<em>%</em></span>
+      <span class="proof-strip__lbl">typical savings vs. standard distributor pricing</span>
+    </div>
+    <div class="proof-strip__divider" aria-hidden="true"></div>
+    <div class="proof-strip__item">
+      <span class="proof-strip__num">100<em>%</em></span>
+      <span class="proof-strip__lbl">FDA-compliant inventory, every SKU</span>
+    </div>
+    <div class="proof-strip__divider" aria-hidden="true"></div>
+    <div class="proof-strip__item">
+      <span class="proof-strip__num">2</span>
+      <span class="proof-strip__lbl">focused categories — no filler, no distraction</span>
+    </div>
+    <div class="proof-strip__divider" aria-hidden="true"></div>
+    <div class="proof-strip__item">
+      <span class="proof-strip__num">1</span>
+      <span class="proof-strip__lbl">dedicated point of contact for every account</span>
+    </div>
+  </div>
+</section>
+
+{# ── SOURCING MODEL ──────────────────────────────────────── #}
+<section class="section" aria-labelledby="sourcing-heading">
   <div class="container">
-    <div class="why-section__grid">
-      <div class="why-section__content">
+    <div class="sourcing-grid">
+
+      <div class="sourcing-grid__content">
         <div class="section-header section-header--left">
           <p class="section-header__eyebrow">Our Sourcing Model</p>
-          <h2 class="section-header__title" id="sourcing-heading">
-            Every product is compliant.<br />Every price is earned.
-          </h2>
+          <h2 class="section-header__title" id="sourcing-heading">Every product is compliant.<br />Every price is earned.</h2>
           <p class="section-header__sub">
-            GHLS doesn't just resell what everyone else carries. Our procurement team actively works the market to find supply opportunities that let us pass real savings to our clinic partners — without sacrificing product quality or regulatory standing.
+            GHLS doesn't just resell what everyone else carries. Our procurement team actively works the market to find supply opportunities that let us pass real savings to clinic partners — without sacrificing product quality or regulatory standing.
           </p>
         </div>
 
         <ul class="advantage-list" role="list">
           <li class="advantage-list__item">
-            <div class="advantage-list__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+
+            <div>
+              <strong>FDA-cleared products only</strong> — every SKU in our inventory meets full regulatory requirements.
             </div>
-            <div><strong>FDA-cleared products only</strong> — every SKU in our inventory meets full regulatory requirements.</div>
           </li>
           <li class="advantage-list__item">
-            <div class="advantage-list__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+
+            <div>
+              <strong>Full documentation provided</strong> — lot numbers, expiration dates, and chain of custody on every order.
             </div>
-            <div><strong>Full documentation provided</strong> — lot numbers, expiration dates, and chain of custody for every order.</div>
           </li>
           <li class="advantage-list__item">
-            <div class="advantage-list__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+
+            <div>
+              <strong>Flexible minimum orders</strong> — we work with your actual usage volume, not arbitrary bulk thresholds.
             </div>
-            <div><strong>Flexible minimum orders</strong> — we work with your actual usage volume, not arbitrary bulk thresholds.</div>
+          </li>
+          <li class="advantage-list__item">
+
+            <div>
+              <strong>One point of contact</strong> — not a call center. A dedicated rep who knows your account.
+            </div>
           </li>
         </ul>
 
-        <a href="/about/" class="btn btn--secondary">Learn More About GHLS</a>
+        <a href="{{ '/about/' | url }}" class="btn btn--secondary" style="margin-top: var(--space-6);">Learn More About GHLS</a>
       </div>
 
-      <div class="why-section__visual" aria-hidden="true">
-        <div class="why-section__stat-stack">
-          <div class="why-section__stat">
-            <span class="why-section__stat-num">15–30<em style="font-size:1.5rem; color: var(--clr-secondary-400);">%</em></span>
-            <span class="why-section__stat-lbl">typical savings vs. standard distributor pricing</span>
-          </div>
-          <div class="why-section__stat">
-            <span class="why-section__stat-num">100<em style="font-size:1.5rem; color: var(--clr-secondary-400);">%</em></span>
-            <span class="why-section__stat-lbl">FDA-compliant inventory, every SKU</span>
-          </div>
-          <div class="why-section__divider"></div>
-          <blockquote class="why-section__pullquote">
+      <aside class="sourcing-grid__aside" aria-label="Sourcing highlights">
+        <blockquote class="sourcing-quote">
+          <p class="sourcing-quote__text">
             "Our clinic partners don't pay for our overhead — they pay for the product. That's the GHLS difference."
-            <cite>— GHLS Procurement</cite>
-          </blockquote>
+          </p>
+          <cite class="sourcing-quote__cite">— GHLS Procurement Team</cite>
+        </blockquote>
+
+        <div class="compliance-badge">
+          <div class="compliance-badge__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="compliance-badge__text">
+            <strong>FDA-Compliant Inventory</strong>
+            <span>All products cleared for clinical use in the United States</span>
+          </div>
         </div>
-      </div>
+
+        <div class="compliance-badge">
+          <div class="compliance-badge__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <div class="compliance-badge__text">
+            <strong>Full Chain of Custody</strong>
+            <span>Lot numbers, expiration dates, and sourcing documentation on every order</span>
+          </div>
+        </div>
+      </aside>
+
     </div>
   </div>
 </section>
 
-{# CTA BAND #}
+{# ── CTA BAND ────────────────────────────────────────────── #}
 {% set ctaHeading = "Ready to see pricing on your specific products?" %}
 {% set ctaSubheading = "Submit a quote request — our team responds within one business day with detailed pricing and availability." %}
 {% set ctaPrimaryLabel = "Request a Quote" %}

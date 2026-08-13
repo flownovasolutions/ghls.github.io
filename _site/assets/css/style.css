@@ -4985,3 +4985,153 @@ code, kbd, samp, .mono {
 }
 
 
+
+
+
+/* ── PROOF STRIP ────────────────────────────────────────── */
+.proof-strip {
+  background: var(--clr-primary-950);
+  padding: var(--space-10) 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.proof-strip__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.proof-strip__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 150px;
+}
+
+.proof-strip__num {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-semibold);
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.proof-strip__num em {
+  font-style: normal;
+  font-size: var(--text-2xl);
+  color: var(--clr-teal-400);
+}
+
+.proof-strip__lbl {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.45);
+  line-height: var(--leading-snug);
+  max-width: 18ch;
+}
+
+.proof-strip__divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+/* ── SOURCING GRID ──────────────────────────────────────── */
+.sourcing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.sourcing-grid__aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ── SOURCING QUOTE ─────────────────────────────────────── */
+.sourcing-quote {
+  background: var(--surface-alt);
+  border-left: 3px solid var(--clr-teal-500);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-7);
+  margin: 0;
+}
+
+.sourcing-quote__text {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--text);
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.sourcing-quote__cite {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-style: normal;
+}
+
+/* ── COMPLIANCE BADGES ──────────────────────────────────── */
+.compliance-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.compliance-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--clr-teal-100);
+  color: var(--clr-teal-700);
+  flex-shrink: 0;
+}
+
+.compliance-badge__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.compliance-badge__text strong {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text);
+}
+
+.compliance-badge__text span {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── RESPONSIVE: PRODUCTS PAGE ──────────────────────────── */
+@media (max-width: 900px) {
+  .sourcing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .proof-strip__divider {
+    display: none;
+  }
+
+  .proof-strip__grid {
+    justify-content: flex-start;
+    gap: var(--space-8);
+  }
+}
