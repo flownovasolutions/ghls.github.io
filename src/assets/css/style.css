@@ -6047,3 +6047,242 @@ a.contact-info__value:hover { color: var(--clr-teal-500); }
     gap: var(--space-3);
   }
 }
+
+
+
+/* ============================================================
+   ABOUT PAGE
+============================================================ */
+
+/* ── Mission ─────────────────────────────────────────────── */
+.about-mission {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-16);
+  align-items: flex-start;
+}
+
+.about-mission__body {
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.about-mission__body:last-child { margin-bottom: 0; }
+
+/* ── Pull Quote ──────────────────────────────────────────── */
+.about-pull-quote {
+  background: var(--clr-primary-900);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  margin: 0;
+  position: sticky;
+  top: calc(var(--header-height, 72px) + var(--space-8));
+}
+
+.about-pull-quote p {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.about-pull-quote cite {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-teal-300);
+  font-style: normal;
+}
+
+/* ── Principles Grid ─────────────────────────────────────── */
+.about-principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.about-principle {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.about-principle:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-color: var(--border-dark);
+}
+
+.about-principle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: var(--radius-lg);
+  background: var(--clr-teal-100);
+  color: var(--clr-teal-700);
+}
+
+.about-principle__title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.about-principle__desc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* ── Comparison Grid ─────────────────────────────────────── */
+.about-diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: flex-start;
+}
+
+.about-diff-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.about-diff-item {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.about-diff-item--ghls {
+  border-color: var(--clr-teal-500);
+  background: var(--clr-teal-100);
+}
+
+.about-diff-item__header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-diff-item--ghls .about-diff-item__header {
+  border-bottom-color: rgba(15,140,144,0.2);
+}
+
+.about-diff-item__label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.about-diff-item__label--bad {
+  background: var(--clr-neutral-100);
+  color: var(--text-muted);
+}
+
+.about-diff-item__label--good {
+  background: var(--clr-teal-500);
+  color: var(--clr-white);
+}
+
+/* Override advantage-list colors for the teal card */
+.about-diff-item--ghls .advantage-list__item { color: var(--clr-teal-700); }
+.about-diff-item--ghls .advantage-list__item::before { background-color: var(--clr-teal-700); }
+.about-diff-item--ghls .advantage-list__item strong { color: var(--clr-teal-900, var(--clr-teal-700)); }
+
+/* ── Team ────────────────────────────────────────────────── */
+.about-team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.about-team__card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.about-team__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--clr-primary-100);
+  color: var(--clr-primary-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-2);
+  border: 2px solid var(--clr-primary-200);
+}
+
+.about-team__name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--text);
+  margin: 0;
+}
+
+.about-team__role {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-teal-500);
+  font-weight: var(--weight-semibold);
+}
+
+.about-team__bio {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: var(--space-2) 0 0 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .about-mission,
+  .about-diff-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about-mission__pull { order: -1; }
+
+  .about-pull-quote { position: static; }
+
+  .about-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-team {
+    grid-template-columns: 1fr;
+  }
+}
