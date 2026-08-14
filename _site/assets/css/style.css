@@ -4509,7 +4509,7 @@ code, kbd, samp, .mono {
 /* ── Advantage Section — white background ────────────────── */
 .why-section--light {
   background-color: var(--clr-white);
-  /* padding: var(--space-24) 0; */
+  padding: var(--space-16) 0;
 }
 
 /* Reset any dark overrides from previous rules */
@@ -4532,7 +4532,7 @@ code, kbd, samp, .mono {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
   align-items: flex-start;
-  margin-top: var(--space-10);
+  /* margin-top: var(--space-10); */
 }
 
 /* Left col spacing */
