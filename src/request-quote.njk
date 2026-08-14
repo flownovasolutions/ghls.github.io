@@ -1,0 +1,258 @@
+---
+layout: layouts/base.njk
+permalink: /request-quote/
+pageTitle: "Request a Quote | GHLS Inc."
+pageDescription: "Request wholesale pricing on FDA-compliant women's health and medical diagnostic products from GHLS Inc. Same-day response."
+activePage: request-quote
+---
+
+{# ── PAGE HERO ───────────────────────────────────────────── #}
+<section class="page-hero" aria-label="Request a Quote">
+  <div class="container page-hero__inner">
+    <div class="page-hero__content">
+      <h1 class="page-hero__title">Request a Quote</h1>
+      <p class="page-hero__sub">
+        Tell us what you need and we'll respond within one business day with pricing, pack sizes, and availability. No commitment required.
+      </p>
+      <div class="page-hero__badges">
+        <span class="page-hero__badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Response Within 1 Business Day
+        </span>
+        <span class="page-hero__badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          No Commitment Required
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── QUOTE FORM + SIDEBAR ─────────────────────────────────── #}
+<section class="section" aria-labelledby="quote-form-heading">
+  <div class="container quote-layout">
+
+    {# ── FORM ── #}
+    <div class="quote-form-wrap">
+      <h2 class="quote-form-wrap__title" id="quote-form-heading">Tell us what you need</h2>
+      <p class="quote-form-wrap__sub">Fill out as much or as little as you know — we'll follow up with any questions.</p>
+
+      <form
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        class="quote-form"
+        novalidate
+      >
+        {# — Contact Info — #}
+        <fieldset class="form-fieldset">
+          <legend class="form-fieldset__legend">Your Information</legend>
+          <div class="form-row form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="q-fname">First Name <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="q-fname" name="first_name" required autocomplete="given-name" placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="q-lname">Last Name <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="q-lname" name="last_name" required autocomplete="family-name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-row form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="q-email">Email Address <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="email" id="q-email" name="email" required autocomplete="email" placeholder="jane@yourclinic.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="q-phone">Phone Number</label>
+              <input class="form-input" type="tel" id="q-phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000">
+            </div>
+          </div>
+          <div class="form-row form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="q-clinic">Clinic / Organization Name <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="q-clinic" name="clinic_name" required placeholder="Midwest Women's Health Clinic">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="q-role">Your Role</label>
+              <input class="form-input" type="text" id="q-role" name="role" placeholder="Office Manager, Purchasing, etc.">
+            </div>
+          </div>
+        </fieldset>
+
+        {# — Product Selection — #}
+        <fieldset class="form-fieldset">
+          <legend class="form-fieldset__legend">Products You're Interested In</legend>
+          <p class="form-fieldset__hint">Select all that apply — we'll include pricing for each in your quote.</p>
+
+          <div class="product-checkbox-grid">
+
+            <p class="product-checkbox-grid__group-label">Women's Health</p>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Pregnancy Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Pregnancy Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Ovulation / LH Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Ovulation / LH Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Fertility Diagnostics">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Fertility Diagnostics
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Prenatal Vitamins & Supplements">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Prenatal Vitamins &amp; Supplements
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="OB/GYN Exam Consumables">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              OB/GYN Exam Consumables
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Group B Strep Testing">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Group B Strep Testing
+            </label>
+
+            <p class="product-checkbox-grid__group-label">Medical Diagnostics</p>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="COVID-19 Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              COVID-19 Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="COVID + Flu Combo">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              COVID + Flu Combo Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="COVID + Flu + RSV Combo">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              COVID + Flu + RSV Combo Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Drug Testing — Urine">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Drug Testing — Urine
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Drug Testing — Oral / Saliva">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Drug Testing — Oral / Saliva
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Influenza A/B Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Influenza A/B Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Strep A Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Strep A Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="RSV Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              RSV Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Hepatitis Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Hepatitis Tests (A, B, or C)
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="Mononucleosis Tests">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              Mononucleosis Tests
+            </label>
+            <label class="product-checkbox">
+              <input type="checkbox" name="products[]" value="UTI / Urinalysis Strips">
+              <span class="product-checkbox__box" aria-hidden="true"></span>
+              UTI / Urinalysis Strips
+            </label>
+
+          </div>
+        </fieldset>
+
+        {# — Volume + Notes — #}
+        <fieldset class="form-fieldset">
+          <legend class="form-fieldset__legend">Volume &amp; Additional Details</legend>
+          <div class="form-row form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="q-volume">Estimated Monthly Volume</label>
+              <select class="form-input form-select" id="q-volume" name="monthly_volume">
+                <option value="" disabled selected>Select a range…</option>
+                <option>Under 100 units/month</option>
+                <option>100–500 units/month</option>
+                <option>500–1,000 units/month</option>
+                <option>1,000–5,000 units/month</option>
+                <option>5,000+ units/month</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="q-timeline">When Do You Need Product?</label>
+              <select class="form-input form-select" id="q-timeline" name="timeline">
+                <option value="" disabled selected>Select a timeline…</option>
+                <option>As soon as possible</option>
+                <option>Within 2 weeks</option>
+                <option>Within 30 days</option>
+                <option>Just exploring pricing</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="q-notes">Additional Notes or Specific Products</label>
+            <textarea class="form-input form-textarea" id="q-notes" name="notes" rows="4" placeholder="e.g. specific panel configurations, brand preferences, current supplier you're comparing against…"></textarea>
+          </div>
+        </fieldset>
+
+        <input type="hidden" name="_subject" value="New Quote Request — GHLS Inc.">
+        <input type="text" name="_gotcha" style="display:none">
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn--primary btn--lg">Submit Quote Request</button>
+          <p class="form-submit-row__note">We'll respond within one business day. No spam, ever.</p>
+        </div>
+
+      </form>
+    </div>
+
+    {# ── SIDEBAR ── #}
+    <aside class="quote-sidebar" aria-label="Contact options">
+
+      <div class="quote-sidebar__card">
+        <div class="quote-sidebar__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3 class="quote-sidebar__card-title">Prefer to call?</h3>
+        <p class="quote-sidebar__card-body">Our team is available Monday through Friday during business hours. Just mention you're calling about a quote.</p>
+        <a href="tel:+15550000000" class="quote-sidebar__phone">(555) 000-0000</a>
+        <span class="quote-sidebar__hours">Mon – Fri, 8:00 AM – 5:00 PM CT</span>
+      </div>
+
+      <div class="quote-sidebar__card">
+        <div class="quote-sidebar__card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="quote-sidebar__card-title">What to expect</h3>
+        <ul class="quote-sidebar__expect-list">
+          <li>Quote returned within 1 business day</li>
+          <li>Itemized pricing per product</li>
+          <li>Pack size and MOQ options included</li>
+          <li>No pressure, no obligation</li>
+        </ul>
+      </div>
+
+      <div class="quote-sidebar__card quote-sidebar__card--teal">
+        <p class="quote-sidebar__card-tagline">"Our clinic partners don't pay for our overhead — they pay for the product."</p>
+        <cite class="quote-sidebar__card-cite">— GHLS Procurement Team</cite>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
