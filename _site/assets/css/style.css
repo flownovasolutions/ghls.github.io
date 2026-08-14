@@ -1522,30 +1522,6 @@ code, kbd, samp, .mono {
   margin: 0;
 }
 
-/* advantage list (inside why-section content) */
-.advantage-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.advantage-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  font-size: var(--text-base);
-  color: var(--text);
-  line-height: 1.5;
-}
-.advantage-list li svg,
-.advantage-list li .adv-icon {
-  flex-shrink: 0;
-  margin-top: 2px;
-  color: var(--clr-secondary-500);
-}
-
 
 /* ============================================================
    15. HOW IT WORKS (steps)
@@ -3000,44 +2976,8 @@ code, kbd, samp, .mono {
   .hero__badge-wrap { display: none; }
 }
 
-/* ============================================================
-   HOMEPAGE — ADVANTAGE LIST
-============================================================ */
 
-.advantage-list {
-  list-style: none;
-  padding: 0;
-  margin: var(--space-8) 0 var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
 
-.advantage-list__item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  font-size: var(--text-base);
-  color: rgba(255,255,255,0.85);
-  line-height: 1.6;
-}
-
-.advantage-list__icon {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-full);
-  background-color: var(--clr-secondary-500);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--clr-white);
-  margin-top: 2px;
-}
-
-.advantage-list__item strong {
-  color: var(--clr-white);
-}
 
 /* ============================================================
    HOMEPAGE — WHY SECTION STAT STACK
@@ -4013,6 +3953,7 @@ code, kbd, samp, .mono {
   flex-shrink: 0;
   position: relative;
   z-index: 1;
+  margin-top: 20px;
 }
 
 .section--dark .step__number,
@@ -4108,72 +4049,6 @@ code, kbd, samp, .mono {
   font-size: var(--text-xs);
   color: var(--clr-primary-400);
   letter-spacing: 0.05em;
-}
-
-
-
-/* ============================================================
-   24-I. ADVANTAGE LIST
-============================================================ */
-.advantage-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.advantage-list__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.advantage-list__icon {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  background: var(--clr-teal-100);
-  color: var(--clr-teal-700);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
-
-.section--dark .advantage-list__icon,
-.section--navy .advantage-list__icon {
-  background: rgba(15, 140, 144, 0.18);
-  color: var(--clr-teal-300);
-}
-
-.advantage-list__text {
-  flex: 1;
-}
-
-.advantage-list__label {
-  font-weight: 600;
-  color: var(--text);
-  display: block;
-  margin-bottom: 0.2rem;
-}
-
-.section--dark .advantage-list__label,
-.section--navy .advantage-list__label {
-  color: var(--clr-white);
-}
-
-.advantage-list__sub {
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  line-height: 1.55;
-}
-
-.section--dark .advantage-list__sub,
-.section--navy .advantage-list__sub {
-  color: var(--clr-primary-300);
 }
 
 
@@ -4423,7 +4298,7 @@ code, kbd, samp, .mono {
 .why-section {
   position: relative;
   background: var(--clr-primary-950);
-  padding: 6rem 0;
+  padding: 4rem 0;
   overflow: hidden;
 }
 
@@ -4483,39 +4358,6 @@ code, kbd, samp, .mono {
   margin: 0 0 2rem;
 }
 
-/* ── Advantage List ── */
-.advantage-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.advantage-list__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: var(--text-sm);
-  line-height: 1.65;
-}
-
-/* Teal checkmark circle icon */
-.advantage-list__item::before {
-  content: "";
-  flex-shrink: 0;
-  width: 1.35rem;
-  height: 1.35rem;
-  margin-top: 0.1rem;
-  border-radius: 50%;
-  background: var(--clr-teal-500);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
-  background-size: 65%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 /* ── "Learn About Our Model" link/button on dark bg ── */
 .why-section .btn--ghost,
@@ -4667,7 +4509,7 @@ code, kbd, samp, .mono {
 /* ── Advantage Section — white background ────────────────── */
 .why-section--light {
   background-color: var(--clr-white);
-  padding: var(--space-24) 0;
+  /* padding: var(--space-24) 0; */
 }
 
 /* Reset any dark overrides from previous rules */
@@ -4681,6 +4523,7 @@ code, kbd, samp, .mono {
 
 .why-section--light .section-header__sub {
   color: var(--text-muted);
+  margin-left: 0;
 }
 
 /* Two-col grid */
@@ -4688,7 +4531,7 @@ code, kbd, samp, .mono {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
-  align-items: center;
+  align-items: flex-start;
   margin-top: var(--space-10);
 }
 
@@ -4696,8 +4539,9 @@ code, kbd, samp, .mono {
 .why-section--light .why-grid > div:first-child {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: 0;
 }
+
 
 /* Advantage list — light bg version */
 .why-section--light .advantage-list {
@@ -4705,7 +4549,7 @@ code, kbd, samp, .mono {
   flex-direction: column;
   gap: var(--space-5);
   list-style: none;
-  margin: 0;
+  margin-top: 4;
   padding: 0;
 }
 
@@ -4722,7 +4566,7 @@ code, kbd, samp, .mono {
 
 .why-section--light .advantage-list__item:last-child {
   border-bottom: none;
-  padding-bottom: 0;
+  padding-bottom: 10;
 }
 
 /* Teal check circle */
@@ -5135,3 +4979,65 @@ code, kbd, samp, .mono {
     gap: var(--space-8);
   }
 }
+
+
+
+/* ── ADVANTAGE LIST ─────────────────────────────────────── */
+.advantage-list {
+  list-style: none;
+  margin: var(--space-6) 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.advantage-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--text);
+  line-height: var(--leading-relaxed);
+}
+
+.advantage-list__item::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  border-radius: 50%;
+  background-color: var(--clr-teal-500);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: 62%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantage-list__item strong {
+  font-weight: var(--weight-semibold);
+  color: var(--text);
+}
+
+/* dark/navy section variant */
+.section--dark .advantage-list__item,
+.section--navy .advantage-list__item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section--dark .advantage-list__item::before,
+.section--navy .advantage-list__item::before {
+  background-color: var(--clr-teal-400);
+}
+
+.section--dark .advantage-list__item strong,
+.section--navy .advantage-list__item strong {
+  color: var(--clr-white);
+}
+
+@media (max-width: 640px) {
+  .advantage-list { gap: var(--space-4); }
+}
+
+
