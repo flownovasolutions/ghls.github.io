@@ -137,13 +137,13 @@
     <nav aria-label="Mobile Navigation">
       <ul class="mobile-nav__list" role="list">
         <li><a href="/"                        class="mobile-nav__link">Home</a></li>
-        <li><a href="/products/"               class="mobile-nav__link">All Products</a></li>
-        <li><a href="/products/womens-health/" class="mobile-nav__link mobile-nav__link--sub">Women's Health</a></li>
-        <li><a href="/products/diagnostics/"   class="mobile-nav__link mobile-nav__link--sub">Medical Diagnostics</a></li>
-        <li><a href="/about/"                  class="mobile-nav__link">About</a></li>
-        <li><a href="/contact/"                class="mobile-nav__link">Contact</a></li>
+        <li><a href="{{ '/products/' | url}}"               class="mobile-nav__link">All Products</a></li>
+        <li><a href="{{ '/products/womens-health/' | url}}" class="mobile-nav__link mobile-nav__link--sub">Women's Health</a></li>
+        <li><a href="{{ '/products/diagnostics/' | url}}"   class="mobile-nav__link mobile-nav__link--sub">Medical Diagnostics</a></li>
+        <li><a href="{{ '/about/' | url}}"                  class="mobile-nav__link">About</a></li>
+        <li><a href="{{ '/contact/' | url}}"                class="mobile-nav__link">Contact</a></li>
         <li>
-          <a href="/request-quote/" class="mobile-nav__link mobile-nav__link--cta">
+          <a href="{{ '/request-quote/' | url}}" class="mobile-nav__link mobile-nav__link--cta">
             Request a Quote
           </a>
         </li>
