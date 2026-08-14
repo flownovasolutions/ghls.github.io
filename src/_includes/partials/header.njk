@@ -52,7 +52,7 @@
 
             {# Medical Diagnostics — has sub-menu #}
             <div class="site-nav__dropdown-item site-nav__dropdown-item--sub">
-              <a href="{{ '/products/diagnostics/' | url }}"
+              <a href="{{ '/products/diagnostics-a/' | url }}"
                  class="site-nav__dropdown-link{% if activePage == 'diagnostics' %} is-active{% endif %}"
                  role="menuitem"
                  aria-haspopup="true">
@@ -68,22 +68,60 @@
               {# Sub-menu — desktop only #}
               <ul class="site-nav__submenu" role="menu" aria-label="Medical Diagnostics">
                 <li>
-                  <a href="/products/diagnostics/#drug-testing" class="site-nav__submenu-link" role="menuitem">
+                  <a href="{{ '/products/diagnostics-a/#drug-testing' | url }}" class="site-nav__submenu-link" role="menuitem">
                     Drug Testing
                   </a>
                 </li>
                 <li>
-                  <a href="/products/diagnostics/#covid" class="site-nav__submenu-link" role="menuitem">
+                  <a href="{{ '/products/diagnostics-a/#covid' | url }}" class="site-nav__submenu-link" role="menuitem">
                     COVID Testing
                   </a>
                 </li>
                 <li>
-                  <a href="/products/diagnostics/#flu" class="site-nav__submenu-link" role="menuitem">
+                  <a href="{{ '/products/diagnostics-a/#flu' | url }}" class="site-nav__submenu-link" role="menuitem">
                     Flu Testing
                   </a>
                 </li>
                 <li>
-                  <a href="/products/diagnostics/#strep" class="site-nav__submenu-link" role="menuitem">
+                  <a href="{{ '/products/diagnostics-a/#strep' | url }}" class="site-nav__submenu-link" role="menuitem">
+                    Strep Testing
+                  </a>
+                </li>
+              </ul>
+              {# Medical Diagnostics — has sub-menu #}
+            <div class="site-nav__dropdown-item site-nav__dropdown-item--sub">
+              <a href="{{ '/products/diagnostics-b/' | url }}"
+                 class="site-nav__dropdown-link{% if activePage == 'diagnostics' %} is-active{% endif %}"
+                 role="menuitem"
+                 aria-haspopup="true">
+                <span class="site-nav__dropdown-label">
+                  Medical Diagnostics
+                  <svg class="site-nav__sub-chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </span>
+                <span class="site-nav__dropdown-desc">Rapid tests &amp; diagnostic kits</span>
+              </a>
+
+              {# Sub-menu — desktop only #}
+              <ul class="site-nav__submenu" role="menu" aria-label="Medical Diagnostics">
+                <li>
+                  <a href="{{ '/products/diagnostics-b/#drug-testing' | url }}" class="site-nav__submenu-link" role="menuitem">
+                    Drug Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/products/diagnostics-b/#covid' | url }}" class="site-nav__submenu-link" role="menuitem">
+                    COVID Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/products/diagnostics-b/#flu' | url }}" class="site-nav__submenu-link" role="menuitem">
+                    Flu Testing
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/products/diagnostics-b/#strep' | url }}" class="site-nav__submenu-link" role="menuitem">
                     Strep Testing
                   </a>
                 </li>
