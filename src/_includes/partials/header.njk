@@ -11,7 +11,7 @@
       <ul class="site-nav__list" role="list">
 
         <li class="site-nav__item">
-          <a href="/"
+          <a href="{{ '/' | url }}"
              class="site-nav__link{% if activePage == 'home' %} is-active{% endif %}"
              {% if activePage == 'home' %}aria-current="page"{% endif %}>
             Home
